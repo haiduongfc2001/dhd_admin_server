@@ -1,0 +1,91 @@
+<% include('../layouts/header.ejs') %>
+
+<h1>Dashboard</h1>
+
+<a href="/admin/new-user">
+    <button>
+        Add New User
+    </button>
+</a>
+<br><br>
+
+<a href="/admin/home">
+    <button>
+        Go to Home
+    </button>
+</a>
+<br><br><br><br>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Image</th>
+        <th>Verified</th>
+        <th>Actions</th>
+    </tr>
+
+    <%
+    if (users.length > 0) {
+    for (var i = 0; i < users.length; i++) {
+    %>
+        <tr>
+            <td><%= users[i].name %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].phone %></td>
+            <td>
+                <img
+                        src="/userImages/<%= users[i].image %>"
+                        alt="<%= users[i].image %>"
+                        style="width: 80px; height: 80px"
+                />
+            </td>
+            <td>
+                <%
+                if (users[i].is_verified === 1) {
+                %>
+                    Verified
+                <%
+                } else {
+                %>
+                    Not Verified
+                <%
+                }
+                %>
+            </td>
+            <td>
+                <a href="/admin/edit-user?id=<%= users[i]._id %>">
+                    <button>
+                        Edit
+                    </button>
+                </a>
+                <a href="/admin/delete-user?id=<%= users[i]._id %>">
+                    <button>
+                        Delete
+                    </button>
+                </a>
+            </td>
+        </tr>
+    <%
+    }
+    } else {
+    %>
+        <tr>
+            <td colspan="5">Users Not Found</td>
+        </tr>
+    <%
+    }
+    %>
+
+</table>
+
+<br><br>
+
+<a href="/admin/logout">
+    <button>
+        Logout
+    </button>
+</a>
+
+<% include('../layouts/footer.ejs') %>

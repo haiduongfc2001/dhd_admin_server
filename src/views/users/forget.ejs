@@ -1,0 +1,28 @@
+<% include('../layouts/header.ejs') %>
+
+<h1> Forget </h1>
+
+<%
+if(typeof message !== 'undefined') {
+%>
+    <h4><%= message %></h4>
+<%
+}
+%>
+
+<form action="/forget" method="post">
+
+    <input
+            style="width: 200px"
+            type="email"
+            name="email"
+            required
+            placeholder="Nhập email để lấy lại mật khẩu"
+    />
+    <br> <br>
+
+    <input type="submit" value="Send Reset Link"/>
+
+</form>
+
+<% include('../layouts/footer.ejs') %>

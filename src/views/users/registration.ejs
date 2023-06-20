@@ -1,0 +1,35 @@
+<h1>User registration Form</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Enter name" required/>
+    <br> <br>
+    <input type="email" name="email" placeholder="Enter email" required/>
+    <br> <br>
+    <input type="number" name="phone" placeholder="Enter phone" required/>
+    <br> <br>
+    <input type="file" name="image" required/>
+    <br> <br>
+    <input type="password" name="password" placeholder="Enter password" required/>
+    <br> <br>
+
+    <input type="submit" value="Register"/>
+</form>
+
+<div>
+    <span>You have a account?</span>
+    <a href="/login">
+        <button>
+            Login
+        </button>
+    </a>
+</div>
+
+<%
+
+    if(typeof message !== "undefined") {
+        %>
+            <p style="color: aqua;"><%= message %></p>
+        <%
+    }
+
+%>
