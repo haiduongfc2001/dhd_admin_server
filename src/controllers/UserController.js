@@ -39,9 +39,22 @@ const sendVerifyMail = async (name, email, user_id) => {
             subject: 'For Verification Mail',
             text: "Plaintext version of the message",
             // html: '<p>Hi <b>'+name+'</b>, please click here to <a href="http://127.0.0.1:5000/verify?id=' + user_id + '"> Verify </a> your mail.</p>',
-            html: '<p>Hi <b>' + name + '</b>, please click here to ' +
-                '<a href="' + userVerificationLink + '">Verify</a>' +
-                ' your mail.</p>',
+
+            html: `
+                <p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">
+                  Xin chào <strong style="color: #0000FF;">${name}</strong>, xin vui lòng nhấp vào ô bên dưới 
+                  để xác thực tài khoản của bạn.
+                </p>
+                <p>
+                  <a 
+                      href="${userVerificationLink}" 
+                      style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #0d6efd; 
+                      color: #FFFFFF; text-decoration: none; border-radius: 5px;"
+                  >
+                    Verify
+                  </a>
+                </p>
+              `,
         }
 
         transporter.sendMail(MailOptions, function (error, info) {
@@ -74,14 +87,31 @@ const sendResetPasswordMail = async (name, email, token) => {
         });
 
         const MailOptions = {
-            from: USERNAME, // Use the same email username as the sender
+            from: USERNAME,
             to: email,
-            subject: 'For Reset Password',
-            // html: '<p>Hi <b>'+name+'</b>, please click here to <a href="http://127.0.0.1:5000/forget-password?token=' + token + '"> Reset </a> your password.</p>',
-            html: '<p>Hi <b>' + name + '</b>, please click here to ' +
-                '<a href="' + resetPasswordLink + '"> Reset </a>' +
-                ' your password.</p>',
-        }
+            subject: 'For Reset Password Admin',
+            html: `
+                <div style="font-family: Arial, sans-serif; font-size: 16px;">
+                  <p style="margin-bottom: 20px;">Hi <b>${name}</b>,</p>
+                  <p style="margin-bottom: 20px;">
+                    Please click the link below to reset your password:
+                  </p>
+                  <p style="margin-bottom: 20px;">
+                    <a 
+                        href="${resetPasswordLink}" 
+                        style="display: inline-block; padding: 10px 20px; background-color: #0d6efd; 
+                        color: #FFFFFF; text-decoration: none; border-radius: 5px;"
+                    >
+                        Reset Password
+                    </a>
+                  </p>
+                  <p style="margin-bottom: 0;">
+                    If you did not request a password reset, please ignore this email.
+                  </p>
+                </div>
+              `,
+        };
+
 
         transporter.sendMail(MailOptions, function (error, info) {
             if (error) {
@@ -359,7 +389,10 @@ const UpdateProfile = async (req, res) => {
 // JSON - Connect to Client
 const AllUsers = async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find().populate({
+            path: 'ratedMovies.movie',
+            select: 'id title'
+        });
         res.json(users);
     } catch (error) {
         res.send(error.message);
@@ -465,7 +498,12 @@ const UserVerifyLogin = async (req, res) => {
 
                     res.status(200)
                         .header('Authorization', `Bearer ${token}`)
-                        .status(200).json({message: 'Logged in successfully', token, user_id: userData._id, user: userData});
+                        .status(200).json({
+                        message: 'Logged in successfully',
+                        token,
+                        user_id: userData._id,
+                        user: userData
+                    });
 
                     // return res.status(200)
                     //     .json({message: 'Logged in successfully', token, user_id: userData._id, user: userData});
@@ -623,6 +661,41 @@ const UserEditProfile = async (req, res) => {
     }
 }
 
+const UserCountStatus = async (req, res) => {
+    try {
+
+        const users = await User.find();
+
+        if (!users.length) {
+            res.status(404).json({message: 'No users found!'})
+        }
+
+        let adminCount = 0;
+        let usersCount = 0;
+        let notVerifiedCount = 0;
+
+        for (const user of users) {
+            if (user.is_admin === 1) {
+                adminCount += 1;
+            } else if (user.is_admin === 0 && user.is_verified === 1) {
+                usersCount += 1;
+            } else {
+                notVerifiedCount += 1;
+            }
+        }
+
+        const userCount = {
+            adminCount, usersCount, notVerifiedCount
+        }
+
+        res.json(userCount);
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({message: 'Server error'});
+    }
+}
+
 
 module.exports = {
     LoadRegister,
@@ -650,5 +723,6 @@ module.exports = {
     UserForgetVerify,
     UserForgetPassword,
     UserResetPassword,
-    UserEditProfile
+    UserEditProfile,
+    UserCountStatus
 }

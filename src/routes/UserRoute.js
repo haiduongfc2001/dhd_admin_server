@@ -25,6 +25,7 @@ user_route.use(bodyParser.json());
 user_route.use(bodyParser.urlencoded({ extended: true }));
 
 const multer = require("multer");
+const {authMiddleware} = require("../middleware/Auth");
 user_route.use('/userImages', express.static('src/public/userImages'));
 
 const storage = multer.diskStorage({
@@ -69,7 +70,7 @@ const upload = multer({storage: storage});
 user_route.get('/users', UserController.AllUsers);
 user_route.get('/user/:_id', UserController.FindUserById);
 // user_route.post('/user/:_id', UserController.FindUserById);
-user_route.put('/user/:_id', upload.single('image'), AdminController.AdminEditUser)
+user_route.put('/user/:_id', AdminController.AdminEditUser)
 user_route.delete('/user/:_id', AdminController.AdminDeleteUser);
 
 user_route.post('/register', upload.single('image'), UserController.UserRegister);
@@ -86,6 +87,8 @@ user_route.get('/forget-password', UserController.UserForgetPassword);
 user_route.post('/forget-password', UserController.UserResetPassword);
 
 user_route.put('/edit-profile/:_id', UserController.UserEditProfile);
+
+user_route.get('/users/count-status', UserController.UserCountStatus);
 
 
 module.exports = user_route;

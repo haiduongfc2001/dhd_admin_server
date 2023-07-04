@@ -1,67 +1,24 @@
-// const Movie = require("./models/MovieModel/MovieModel");
-// const User = require("./models/UserModel");
-// router.post('/movie/:_id/rating', async (req, res) => {
-//     try {
-//         const {rating} = req.body;
-//         const userId = req.user._id;
+// const express = require('express');
 //
-//         // Check if movie exists
-//         const movieId = req.params._id;
-//         const movie = await Movie.findById(movieId);
-//         if (!movie) {
-//             return res.status(404).json({error: 'Movie not found!'});
-//         }
+// const admin_route = express();
 //
-//         let sumRating = 0;
+// const session = require("express-session");
+// const SessionSecret = require('../config/SessionSecret')
+// admin_route.use(session({
+//     secret: SessionSecret.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: { secure: true }
+// }));
 //
-//         const existingRatingMovie = user.ratedMovies.find((ratedMovie) => String(ratedMovie.movie) === movieId);
-//         if (existingRatingMovie) {
-//             existingRatingMovie.rating = rating;
-//             await user.save();
+// const bodyParser = require('body-parser');
+// admin_route.use(bodyParser.json());
+// admin_route.use(bodyParser.urlencoded({ extended: true}));
 //
-//             const existingRatingUser = movie.ratings.find((ratingUser) => String(ratingUser.user) === userId)
-//             if (existingRatingUser) {
-//                 existingRatingUser.rating = rating;
-//                 for (let i = 0; i < movie.ratings.length; i++) {
-//                     sumRating += movie.ratings[i].rating;
-//                 }
-//                 if (movie.vote_count_user !== 0) {
-//                     movie.vote_average_user = (sumRating / movie.vote_count_user).toFixed(1);
-//                 }
+// const AdminController = require('../controllers/AdminController');
+// const Auth = require("../middleware/Auth");
 //
-//                 await movie.save();
-//             }
+// admin_route.post('/login', Auth.isAdminLogin, AdminController.AdminLogin);
+// admin_route.post('/logout', AdminController.AdminLogout);
 //
-//             return res.status(200).json({message: 'Rating updated successfully'});
-//         }
-//
-//         // Create a new rating
-//         const newRatingMovie = {
-//             movie: movieId,
-//             rating: rating,
-//         };
-//         user.ratedMovies.push(newRatingMovie);
-//         await user.save();
-//
-//         const newRatingUser = {
-//             user: userId,
-//             rating: rating,
-//         };
-//         movie.ratings.push(newRatingUser);
-//         movie.vote_count_user += 1;
-//
-//         for (let i = 0; i < movie.ratings.length; i++) {
-//             sumRating += movie.ratings[i].rating;
-//         }
-//         if (movie.vote_count_user !== 0) {
-//             movie.vote_average_user = (sumRating / movie.vote_count_user).toFixed(1);
-//         }
-//
-//         await movie.save();
-//
-//         res.status(200).json({message: 'Rating added successfully'});
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).json({error: 'Server error'});
-//     }
-// };
+// module.exports = admin_route;

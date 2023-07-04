@@ -42,6 +42,7 @@ const {authAdmin} = require("../middleware/AdminAuth");
 const randomstring = require("randomstring");
 const nodemailer = require("nodemailer");
 const {HOST, PORT, USERNAME, PASSWORD} = require("../config/MailConfig");
+const Auth = require("../middleware/Auth");
 
 // admin_route.get('/', AdminAuth.isLogout, AdminController.LoadLogin);
 // admin_route.post('/', AdminController.VerifyLogin);

@@ -7,7 +7,7 @@ const path = require("path");
 const bodyParser = require('body-parser');
 const Auth = require("../middleware/Auth");
 movieRoute.use(bodyParser.json());
-movieRoute.use(bodyParser.urlencoded({ extended: true }));
+movieRoute.use(bodyParser.urlencoded({extended: true}));
 
 movieRoute.set('view engine', 'pug');
 movieRoute.set('views', path.join(__dirname, '../views'))
@@ -26,10 +26,14 @@ movieRoute.post('/movie/add-link', MovieController.AddMovieByLink);
 movieRoute.post('/movie/:_id/rating', MovieController.RatingMovie);
 
 // movieRoute.get('/movie/genre/action', MovieController.FilterActionMovie);
-movieRoute.get('/movie/genre/:genre', MovieController.FilterMovie);
+movieRoute.get('/movie/genre/:genre', MovieController.FilterMoviesByGenre);
 movieRoute.get('/movies/genres', MovieController.AllGenresOfMovies);
 
 // movie.production_companies
 movieRoute.get('/movies/companies', MovieController.AllProductionCompanies);
+movieRoute.get('/movies/user-vote', MovieController.CountRatings);
+
+movieRoute.get('/movies/ratings', MovieController.ListUsersRatingMovie);
+movieRoute.get('/movies/search', MovieController.SearchMovies);
 
 module.exports = movieRoute;

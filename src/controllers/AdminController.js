@@ -39,13 +39,26 @@ const sendResetPasswordMail = async (name, email, token) => {
         });
 
         const MailOptions = {
-            from: USERNAME, // Use the same email username as the sender
+            from: USERNAME,
             to: email,
-            subject: 'For Reset Password',
-            html: '<p>Hi <b>' + name + '</b>, please click here to ' +
-                '<a href="' + resetPasswordLink + '"> Reset </a> ' +
-                'your password.</p>',
-        }
+            subject: 'For Reset Password Admin',
+            html: `
+                <div style="font-family: Arial, sans-serif; font-size: 16px;">
+                  <p>Hi <b>${name}</b>,</p>
+                  <p>Please click the link below to reset your password:</p>
+                  <p>
+                    <a 
+                        href="${resetPasswordLink}" 
+                        style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #0d6efd; 
+                        color: #FFFFFF; text-decoration: none; border-radius: 5px;"
+                    >
+                    Reset Password
+                    </a>
+                  </p>
+                </div>
+              `,
+        };
+
 
         transporter.sendMail(MailOptions, function (error, info) {
             if (error) {
@@ -76,17 +89,32 @@ const addUserMail = async (name, email, password, user_id) => {
         });
 
         const MailOptions = {
-            from: USERNAME, // Use the same email username as the sender
+            from: USERNAME,
             to: email,
             subject: 'Admin add you and verify your email',
-            html: '<p>Hi ' + name + ', please click here to ' +
-                '<a href="' + userVerificationLink + '">Verify</a> ' +
-                'your mail.</p>' +
-                '<br>' +
-                'Email: <b>' + email + '</b>' +
-                '<br>' +
-                'Password: <b>' + password + '</b>',
-        }
+            html: `
+                <div style="font-family: Arial, sans-serif; font-size: 16px;">
+                  <p>Hi ${name},</p>
+                  <p>Please click the link below to verify your email:</p>
+                  <p>
+                    <a 
+                        href="${userVerificationLink}" 
+                        style="display: inline-block; margin-top: 10px; padding: 10px 20px; 
+                        background-color: #0d6efd; color: #FFFFFF; text-decoration: none; border-radius: 5px;"
+                    >
+                        Verify Email
+                    </a>
+                  </p>
+                  <br>
+                  <p>Here are your login credentials:</p>
+                  <ul style="list-style: none; padding: 0;">
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Password:</strong> ${password}</li>
+                  </ul>
+                </div>
+              `,
+        };
+
 
         transporter.sendMail(MailOptions, function (error, info) {
             if (error) {
@@ -361,6 +389,7 @@ const AdminLogin = async (req, res) => {
 
                 // Lưu thông tin người dùng trong session
                 req.session.adminId = admin._id;
+                req.session.cookie.expires = new Date(Date.now() + 60 * 60 * 1000);
 
                 res.json({token});
             }
@@ -382,19 +411,23 @@ const AdminLogout = async (req, res) => {
     //     }
     // });
 
-    const {token} = req.body;
+    // const {token} = req.body;
+    //
+    // // Verify the token
+    // jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    //     if (err) {
+    //         return res.status(401).json({message: 'Invalid token'});
+    //     }
+    //
+    //     // Perform any necessary logout logic (e.g., removing tokens from the database, etc.)
+    //
+    //     // Return a success message
+    //     res.status(200).json({message: 'Logged out successfully'});
+    // });
 
-    // Verify the token
-    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-        if (err) {
-            return res.status(401).json({message: 'Invalid token'});
-        }
-
-        // Perform any necessary logout logic (e.g., removing tokens from the database, etc.)
-
-        // Return a success message
-        res.status(200).json({message: 'Logged out successfully'});
-    });
+    // Xóa token khỏi session để đăng xuất
+    delete req.session.token;
+    res.status(200).json({message: 'Logged out successfully'});
 };
 
 const AdminAddUser = async (req, res) => {
@@ -455,36 +488,41 @@ const AdminDeleteUser = async (req, res) => {
 // Sửa thông tin User
 const AdminEditUser = async (req, res) => {
     try {
-        const name = req.body.name;
-        const email = req.body.email;
-        const phone = req.body.phone;
-        const image = req.file.filename;
+        const {name, email, phone} = req.body;
+        // const image = req.file.filename;
 
         const userId = req.params._id;
+        const existingUser = await User.findById(userId);
 
-        const user = await User.findById(userId);
-
-        if (!user) {
+        if (!existingUser) {
             return res.status(404).json({message: 'User not found'});
         }
 
         // Delete the old photo if it exists
-        if (user.image) {
-            const imagePath = path.join(__dirname, '../public/userImages', user.image);
-            fs.unlink(imagePath, (err) => {
-                if (err) {
-                    console.log(err);
-                }
-            });
-        }
+        // if (existingUser.image) {
+        //     const imagePath = path.join(__dirname, '../public/userImages', existingUser.image);
+        //     fs.unlink(imagePath, (err) => {
+        //         if (err) {
+        //             console.log(err);
+        //         }
+        //     });
+        // }
 
-        const updatedUser = await User.findByIdAndUpdate(
-            userId,
-            {name, email, phone, image},
-            {new: true}
-        );
+        // const updatedUser = await User.findByIdAndUpdate(
+        //     userId,
+        //     {name, email, phone},
+        //     {new: true}
+        // );
+
+        existingUser.name = name;
+        existingUser.email = email;
+        existingUser.phone = phone;
+        existingUser.updatedAt = new Date();
+
+        const updatedUser = await existingUser.save();
 
         res.status(200).json(updatedUser);
+
     } catch (error) {
         res.status(500).send(error.message);
     }
@@ -506,13 +544,26 @@ const sendResetPasswordMailAdmin = async (name, email, token) => {
         });
 
         const MailOptions = {
-            from: USERNAME, // Use the same email username as the sender
+            from: USERNAME,
             to: email,
             subject: 'For Reset Password Admin',
-            html: '<p>Hi <b>' + name + '</b>, please click here to ' +
-                '<a href="' + resetPasswordLink + '"> Reset </a> ' +
-                'your password.</p>',
-        }
+            html: `
+                <div style="font-family: Arial, sans-serif; font-size: 16px;">
+                  <p>Hi <b>${name}</b>,</p>
+                  <p>Please click the link below to reset your password:</p>
+                  <p>
+                    <a 
+                        href="${resetPasswordLink}" 
+                        style="display: inline-block; margin-top: 10px; padding: 10px 20px; 
+                        background-color: #0d6efd; color: #FFFFFF; text-decoration: none; border-radius: 5px;"
+                    >
+                        Reset Password
+                    </a>
+                  </p>
+                </div>
+              `,
+        };
+
 
         transporter.sendMail(MailOptions, function (error, info) {
             if (error) {

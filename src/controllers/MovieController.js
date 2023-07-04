@@ -1,6 +1,7 @@
 const Movie = require("../models/MovieModel/MovieModel");
 const User = require("../models/UserModel");
 const axios = require("axios");
+const {API_MOVIE_URL, API_MOVIE_KEY} = require("../config/movies/MovieConfig");
 
 // Tất cả movie
 const AllMovies = async (req, res) => {
@@ -12,7 +13,7 @@ const AllMovies = async (req, res) => {
     // }
 
     try {
-        const movies = await Movie.find();
+        const movies = await Movie.find().populate('ratings.user', 'email');
         res.json(movies);
     } catch (error) {
         console.error(error);
@@ -28,10 +29,11 @@ const FindMovieById = async (req, res) => {
         if (movie) {
             res.json(movie);
         } else {
-            res.sendStatus(404);
+            res.status(404).json({message: 'Movie not found!'});
         }
     } catch (error) {
-        res.status(500).send(error.message);
+        console.error(error);
+        res.status(500).json({message: 'Internal Server Error'});
     }
 };
 
@@ -51,18 +53,18 @@ const AddMovie = async (req, res) => {
 // Sửa thông tin movie
 const EditMovie = async (req, res) => {
     try {
-        const {title, overview, poster_path} = req.body;
+        const {title, overview, poster_path, production_countries, production_companies} = req.body;
 
         const movieId = req.params._id;
-        const movie = await Movie.findById(movieId);
+        const existingMovie = await Movie.findById(movieId);
 
-        if (!movie) {
+        if (!existingMovie) {
             return res.status(404).json({message: 'Movie not found'});
         }
 
         const updatedMovie = await Movie.findByIdAndUpdate(
             movieId,
-            {title, overview, poster_path},
+            {title, overview, poster_path, production_countries, production_companies},
             {new: true});
 
         res.status(200).json(updatedMovie);
@@ -88,20 +90,6 @@ const DeleteMovie = async (req, res) => {
     }
 };
 
-// // Delete a movie
-// app.delete('/movie/:_id', (req, res) => {
-//     Movie.findOneAndRemove({_id: req.params._id}).then((movie) => {
-//         if (movie) {
-//             res.send(`Movie ${req.params._id} deleted successfully!`);
-//         } else {
-//             res.send(`Movie ${req.params._id} not found!`);
-//         }
-//     }).catch((err) => {
-//         console.error(err);
-//         res.status(500).send('Error deleting movie');
-//     });
-// });
-
 const AddMovieByLink = async (req, res) => {
     try {
         // const movie = new Movie(req.body);
@@ -112,7 +100,7 @@ const AddMovieByLink = async (req, res) => {
         const {link} = req.body;
 
         // Make a request to fetch the movie data based on the provided link
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/${link}?api_key=043ea53b0f115cd3997dcbb3f8a46a1a`);
+        const response = await axios.get(`${API_MOVIE_URL}${link}?api_key=${API_MOVIE_KEY}`);
         const movieData = response.data;
 
         // Process the movie data and add it to your database or perform any other necessary operations
@@ -210,17 +198,17 @@ const RatingMovie = async (req, res) => {
     }
 };
 
-const FilterMovie = async (req, res) => {
+const FilterMoviesByGenre = async (req, res) => {
     try {
 
-        const { genre } = req.params;
+        const {genre} = req.params;
 
         // movie.genres.name
         // sử dụng biểu thức chính quy `regex` để tìm kiếm
         // $regex: new RegExp(genre, 'i') là một toán tử so khớp mẫu (regex) được sử dụng để tìm kiếm.
         // Chúng ta tạo một đối tượng RegExp mới bằng cách truyền biến genre vào hàm RegExp và
         // tham số 'i' để cho phép tìm kiếm không phân biệt chữ hoa chữ thường.
-        const genreMovies = await Movie.find({ 'genres.name': { $regex: new RegExp(genre, 'i') } });
+        const genreMovies = await Movie.find({'genres.name': {$regex: new RegExp(genre, 'i')}});
 
         if (genreMovies.length > 0) {
             res.json(genreMovies);
@@ -240,10 +228,10 @@ const AllGenresOfMovies = async (req, res) => {
         const movies = await Movie.find();
         const genres = movies.reduce((result, movie) => {
             movie.genres.forEach((genre) => {
-                const { id, name } = genre;
+                const {id, name} = genre;
                 const existingGenre = result.find((g) => g.id === id);
                 if (!existingGenre) {
-                    result.push({ id, name });
+                    result.push({id, name});
                 }
             });
             return result;
@@ -252,7 +240,7 @@ const AllGenresOfMovies = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Server error' });
+        res.status(500).json({error: 'Server error'});
     }
 };
 
@@ -262,10 +250,10 @@ const AllProductionCompanies = async (req, res) => {
         const movies = await Movie.find();
         const productionCompanies = movies.reduce((result, movie) => {
             movie.production_companies.forEach((company) => {
-                const { _id, id, name, logo_path, origin_country } = company;
+                const {_id, id, name, logo_path, origin_country} = company;
                 const existingCompany = result.find((c) => (c.id === id || c.name === name));
                 if (!existingCompany) {
-                    result.push({ _id, id, name, logo_path, origin_country });
+                    result.push({_id, id, name, logo_path, origin_country});
                 }
             });
             return result;
@@ -275,29 +263,85 @@ const AllProductionCompanies = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Server error' });
+        res.status(500).json({error: 'Server error'});
     }
 }
 
-// const AllProductionCompanies = async (req, res) => {
+// const ListUsersRatingMovie = async (req, res) => {
 //     try {
-//         const movies = await Movie.find();
-//         const productionCompanies = Array.from(new Set(movies.flatMap(movie => movie.production_companies.map(company => ({
-//             _id: company._id,
-//             id: company.id,
-//             name: company.name,
-//             logo_path: company.logo_path,
-//             origin_country: company.origin_country
-//         })))));
 //
-//         res.json(productionCompanies);
+//         const movie = await Movie.find().populate('ratings.user', 'email');
+//         if (!movie) {
+//             return res.status(404).json({ error: 'Movie not found' });
+//         }
+//
+//         res.status(200).json(movie);
 //     } catch (error) {
 //         console.error(error);
 //         res.status(500).json({ error: 'Server error' });
 //     }
 // }
 
+const ListUsersRatingMovie = async (req, res) => {
+    try {
 
+        const movies = await Movie.find().populate('ratings.user', 'email');
+        if (!movies) {
+            return res.status(404).json({error: 'No movies!'});
+        }
+        res.json(movies);
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: "Server error"});
+    }
+};
+
+const CountRatings = async (req, res) => {
+    try {
+        const movies = await Movie.find();
+
+        if (!movies) {
+            res.status(404).json({message: 'No movies!'});
+        }
+
+        let countVote = 0;
+        for (const movie of movies) {
+            countVote += movie.vote_count_user;
+        }
+
+        res.json({ countVote });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: "Server error"});
+    }
+}
+
+const SearchMovies = async (req, res) => {
+    try {
+        const movies = await Movie.find();
+
+        if (!movies) {
+            res.status(404).json({message: 'No movies!'});
+        }
+
+        const searchTerm = req.query.query;
+        const searchResults = movies.filter((movie) =>
+            movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        if (searchResults.length > 0) {
+            res.json(searchResults);
+        } else {
+            res.json({message: 'No movies found!'});
+        }
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: "Server error"});
+    }
+}
 
 
 module.exports = {
@@ -309,9 +353,12 @@ module.exports = {
     AddMovieByLink,
     RatingMovie,
     // FilterActionMovie,
-    FilterMovie,
+    FilterMoviesByGenre,
     AllGenresOfMovies,
-    AllProductionCompanies
+    AllProductionCompanies,
+    ListUsersRatingMovie,
+    CountRatings,
+    SearchMovies
 }
 
 // const FilterActionMovie = async (req, res) => {
