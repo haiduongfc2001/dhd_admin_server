@@ -41,34 +41,12 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-user_route.get("/register", Auth.isLogout, UserController.LoadRegister);
-// user_route.post('/register', upload.single('image'), UserController.AddUser);
-//
-// user_route.get('/verify', UserController.VerifyMail);
-//
-// user_route.get('/', Auth.isLogout, UserController.LoginLoad);
-//
-// user_route.get('/login', Auth.isLogout, UserController.LoginLoad);
-// user_route.post('/login', UserController.VerifyLogin);
-//
-// user_route.get('/home', Auth.isLogin, UserController.LoadHome);
-//
-// user_route.get('/logout', Auth.isLogin, UserController.UserLogout);
-//
-// user_route.get('/forget', Auth.isLogout, UserController.ForgetLoad);
-// user_route.post('/forget', UserController.ForgetVerify);
-//
-// user_route.get('/forget-password', Auth.isLogout, UserController.ForgetPasswordLoad);
-// user_route.post('/forget-password', UserController.ResetPassword);
-//
-// user_route.get('/verification', UserController.VerificationLoad);
-// user_route.post('/verification', UserController.SendVerificationLink);
-//
-// user_route.get('/edit', Auth.isLogin, UserController.EditLoad);
-// user_route.post('/edit', upload.single('image'), UserController.UpdateProfile);
-
 // axios
-user_route.get("/users", UserController.AllUsers);
+user_route.get(
+  "/users",
+  //  Auth.authenticateAdmin,
+  UserController.AllUsers
+);
 user_route.get("/user/:_id", UserController.FindUserById);
 // user_route.post('/user/:_id', UserController.FindUserById);
 user_route.put("/user/:_id", AdminController.AdminEditUser);
@@ -91,6 +69,11 @@ user_route.post("/forget", UserController.UserForgetVerify);
 user_route.get("/forget-password", UserController.UserForgetPassword);
 user_route.post("/forget-password", UserController.UserResetPassword);
 
+user_route.put(
+  "/edit-profile/:_id/image",
+  upload.single("image"),
+  UserController.UserEditImage
+);
 user_route.put("/edit-profile/:_id", UserController.UserEditProfile);
 
 user_route.get("/users/count-status", UserController.UserCountStatus);
