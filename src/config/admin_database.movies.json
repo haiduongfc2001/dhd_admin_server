@@ -1,0 +1,1868 @@
+[{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e13"
+  },
+  "adult": false,
+  "backdrop_path": "/3biBcohe172vLq243lFKreiEOwA.jpg",
+  "belongs_to_collection": null,
+  "budget": 1000000,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 541,
+  "imdb_id": "tt0048347",
+  "original_language": "en",
+  "original_title": "The Man with the Golden Arm",
+  "overview": "A junkie must face his true self to kick his drug addiction.",
+  "popularity": 9.903,
+  "poster_path": "/3TUOhZhM5GCYIbxwFO3chpZ0DHx.jpg",
+  "production_companies": [
+    {
+      "id": 3266,
+      "logo_path": "https://a.allegroimg.com/s1024/0ce07f/2e705e404b3084680a24f1f7affc",
+      "name": "Otto Preminger Films",
+      "origin_country": "US"
+    },
+    {
+      "id": 60,
+      "logo_path": "/1SEj4nyG3JPBSKBbFhtdcHRaIF9.png",
+      "name": "United Artists",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1955-12-26",
+  "revenue": 4350000,
+  "runtime": 119,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    }
+  ],
+  "status": "Released",
+  "tagline": "An 'untouchable' theme…an unusual motion picture!",
+  "title": "The Man with the Golden Arm",
+  "video": false,
+  "vote_average": 7.181,
+  "vote_count": 191,
+  "__v": 11,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 9,
+      "_id": {
+        "$oid": "6489b9f25801f226f37e02d3"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T13:00:34.146Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-19T17:13:28.141Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6484992b9bd6d133ba680b26"
+      },
+      "rating": 9,
+      "_id": {
+        "$oid": "6489ba0ebda20708b24d4f82"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T13:01:02.593Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-15T04:51:00.079Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6480b15eaccd5290025c73ab"
+      },
+      "rating": 9,
+      "_id": {
+        "$oid": "6489d08a6a1fb3ef8d516b48"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T14:36:58.664Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-17T04:57:59.926Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6496bca64e170f0caba0ef84"
+      },
+      "rating": 3,
+      "_id": {
+        "$oid": "6496be0d4e170f0caba6346a"
+      },
+      "createdAt": {
+        "$date": "2023-06-24T09:57:33.453Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-24T09:57:56.365Z"
+      }
+    }
+  ],
+  "vote_average_user": 7.5,
+  "vote_count_user": 4
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e14"
+  },
+  "adult": false,
+  "backdrop_path": "/edV5Rdc9uJMftJCaOtHI5Tgd2ex.jpg",
+  "belongs_to_collection": null,
+  "budget": 1800000,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "http://padreamaro.ad2.com/site/home_eng.htm",
+  "id": 542,
+  "imdb_id": "tt0313196",
+  "original_language": "es",
+  "original_title": "El Crimen del Padre Amaro",
+  "overview": "Sent to Mexico to help take care of aging Father Benito, young Father Amaro faces a moral challenge when he meets a 16-year-old girl who he starts an affair with. Likewise, the girl's mother had been having an affair with Father Benito. Father Amaro must choose between a holy or sinful life.",
+  "popularity": 14.224,
+  "poster_path": "/wqwt2DKcQV6EeSwXuYTk7pkLFii.jpg",
+  "production_companies": [
+    {
+      "id": 299,
+      "logo_path": "/elssmtHcogGtF8Gxokh9phZvLKi.png",
+      "name": "Instituto Mexicano de Cinematografía",
+      "origin_country": "MX"
+    },
+    {
+      "id": 300,
+      "logo_path": "/8DErUAEZtHxaDTiw4elzw32AYhT.png",
+      "name": "Alameda Films",
+      "origin_country": "MX"
+    },
+    {
+      "id": 301,
+      "logo_path": null,
+      "name": "Cinecolor-México",
+      "origin_country": ""
+    },
+    {
+      "id": 303,
+      "logo_path": null,
+      "name": "Cinecolor-Argentina",
+      "origin_country": ""
+    },
+    {
+      "id": 304,
+      "logo_path": null,
+      "name": "Artcam y Fonds Sud Cinéma",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "MX",
+      "name": "Mexico"
+    }
+  ],
+  "release_date": "2002-10-01",
+  "revenue": 0,
+  "runtime": 118,
+  "spoken_languages": [
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Lead us not into temptation",
+  "title": "The Crime of Padre Amaro",
+  "video": false,
+  "vote_average": 6.626,
+  "vote_count": 234,
+  "__v": 4,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b15eaccd5290025c73ab"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "6489d34588cd2b17d4c09e80"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T14:48:37.233Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-14T15:21:08.336Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6484992b9bd6d133ba680b26"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "6489db03520be86e0fc3c401"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T15:21:39.338Z"
+      },
+      "updatedAt": {
+        "$date": "2023-07-08T16:49:29.712Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "6489e48a520be86e0fcffbf5"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T16:02:18.712Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-15T04:52:00.071Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6496bca64e170f0caba0ef84"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "6496be3d4e170f0caba9fe0e"
+      },
+      "createdAt": {
+        "$date": "2023-06-24T09:58:21.374Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-24T09:58:21.374Z"
+      }
+    }
+  ],
+  "vote_average_user": 10,
+  "vote_count_user": 4
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e15"
+  },
+  "adult": false,
+  "backdrop_path": "/1oGFeCeuiqjcG0JGSf0Kp1KC1S8.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 543,
+  "imdb_id": "tt0019702",
+  "original_language": "en",
+  "original_title": "Blackmail",
+  "overview": "London, 1929. Frank Webber, a very busy Scotland Yard detective, seems to be more interested in his work than in Alice White, his girlfriend. Feeling herself ignored, Alice agrees to go out with an elegant and well-mannered artist who invites her to visit his fancy apartment.",
+  "popularity": 8.204,
+  "poster_path": "/klilqRJDTANv9XMTBbL51NOsOXZ.jpg",
+  "production_companies": [
+    {
+      "id": 305,
+      "logo_path": null,
+      "name": "British International Pictures",
+      "origin_country": "GB"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "GB",
+      "name": "United Kingdom"
+    }
+  ],
+  "release_date": "1929-07-28",
+  "revenue": 0,
+  "runtime": 86,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Hold everything till you've heard this one!",
+  "title": "Blackmail",
+  "video": false,
+  "vote_average": 6.59,
+  "vote_count": 201,
+  "__v": 2,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 8,
+      "_id": {
+        "$oid": "648a0ef99ecec94294838706"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T19:03:21.522Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-15T03:22:39.619Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6484992b9bd6d133ba680b26"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "64aeb84e74c68e09561b5f2e"
+      },
+      "createdAt": {
+        "$date": "2023-07-12T14:27:26.044Z"
+      },
+      "updatedAt": {
+        "$date": "2023-07-12T14:27:26.044Z"
+      }
+    }
+  ],
+  "vote_average_user": 9,
+  "vote_count_user": 2
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e16"
+  },
+  "adult": false,
+  "backdrop_path": "/egJQ3nIon5fT8wyXcKRHzvmtZpD.jpg",
+  "belongs_to_collection": null,
+  "budget": 23000000,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "http://www.aboutmary.com/",
+  "id": 544,
+  "imdb_id": "tt0129387",
+  "original_language": "en",
+  "original_title": "There's Something About Mary",
+  "overview": "For Ted, prom night went about as bad as it’s possible for any night to go. Thirteen years later, he finally gets another chance with his old prom date, only to run up against other suitors including the sleazy detective he hired to find her.",
+  "popularity": 27.883,
+  "poster_path": "/g03pwohXHOI75InM3zraiaEGguO.jpg",
+  "production_companies": [
+    {
+      "id": 25,
+      "logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png",
+      "name": "20th Century Fox",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1998-07-15",
+  "revenue": 369884651,
+  "runtime": 119,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Love Is In The Hair.",
+  "title": "There's Something About Mary",
+  "video": false,
+  "vote_average": 6.582,
+  "vote_count": 4482,
+  "__v": 2,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "648a0fb49ecec9429486b433"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T19:06:28.469Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-15T13:34:31.230Z"
+      }
+    },
+    {
+      "user": {
+        "$oid": "6484992b9bd6d133ba680b26"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "64aeb85674c68e09561b7a6e"
+      },
+      "createdAt": {
+        "$date": "2023-07-12T14:27:34.080Z"
+      },
+      "updatedAt": {
+        "$date": "2023-07-12T14:27:37.047Z"
+      }
+    }
+  ],
+  "vote_average_user": 10,
+  "vote_count_user": 2
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e17"
+  },
+  "adult": false,
+  "backdrop_path": "/A0vAcnqEMG3OjFKShNqru76IpGy.jpg",
+  "belongs_to_collection": null,
+  "budget": 1000000,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "http://www.transamerica-movie.com/",
+  "id": 546,
+  "imdb_id": "tt0407265",
+  "original_language": "en",
+  "original_title": "Transamerica",
+  "overview": "Bree is about to get a sex reassignment surgery that will finally allow her to actually be what she’s already been in her mind for a long time: a transitioned woman. Yet before this happens she suddenly runs into her son who ends up coming for the trip across the United States.",
+  "popularity": 9.325,
+  "poster_path": "/s1ctu6p0nYJ29OqOEIGrIMRYQIu.jpg",
+  "production_companies": [
+    {
+      "id": 2341,
+      "logo_path": null,
+      "name": "Belladonna Productions",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2005-12-23",
+  "revenue": 13350369,
+  "runtime": 103,
+  "spoken_languages": [
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    },
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Life is a journey. Bring an open mind.",
+  "title": "Transamerica",
+  "video": false,
+  "vote_average": 7.056,
+  "vote_count": 402,
+  "__v": 1,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 9,
+      "_id": {
+        "$oid": "648a10999ecec9429486f7ba"
+      },
+      "createdAt": {
+        "$date": "2023-06-14T19:10:17.711Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-14T19:10:17.711Z"
+      }
+    }
+  ],
+  "vote_average_user": 9,
+  "vote_count_user": 1
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e18"
+  },
+  "adult": false,
+  "backdrop_path": "/ww9pokP6M6gp2Iu0o3sT5B7eN66.jpg",
+  "belongs_to_collection": null,
+  "budget": 60000000,
+  "genres": [
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 547,
+  "imdb_id": "tt0119314",
+  "original_language": "en",
+  "original_title": "The Horse Whisperer",
+  "overview": "The mother of a severely traumatized daughter enlists the aid of a unique horse trainer to help the girl's equally injured horse.",
+  "popularity": 13.093,
+  "poster_path": "/1Ptdh2fdA5xpH5Zj8AQUAp9Tdoa.jpg",
+  "production_companies": [
+    {
+      "id": 316,
+      "logo_path": null,
+      "name": "Wildwood Enterprises",
+      "origin_country": "US"
+    },
+    {
+      "id": 9195,
+      "logo_path": "/ou5BUbtulr6tIt699q6xJiEQTR9.png",
+      "name": "Touchstone Pictures",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1998-02-01",
+  "revenue": 186883563,
+  "runtime": 170,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "A Robert Redford Film",
+  "title": "The Horse Whisperer",
+  "video": false,
+  "vote_average": 6.881,
+  "vote_count": 991,
+  "__v": 1,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 9,
+      "_id": {
+        "$oid": "649089ff11a080c060bdd547"
+      },
+      "createdAt": {
+        "$date": "2023-06-19T17:01:51.025Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-19T17:01:53.615Z"
+      }
+    }
+  ],
+  "vote_average_user": 9,
+  "vote_count_user": 1
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e19"
+  },
+  "adult": false,
+  "backdrop_path": "/zyO6j74DKMWfp5snWg6Hwo0T3Mz.jpg",
+  "belongs_to_collection": null,
+  "budget": 250000,
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 9648,
+      "name": "Mystery"
+    }
+  ],
+  "homepage": "",
+  "id": 548,
+  "imdb_id": "tt0042876",
+  "original_language": "ja",
+  "original_title": "羅生門",
+  "overview": "Brimming with action while incisively examining the nature of truth, \"Rashomon\" is perhaps the finest film ever to investigate the philosophy of justice. Through an ingenious use of camera and flashbacks, Kurosawa reveals the complexities of human nature as four people recount different versions of the story of a man's murder and the rape of his wife.",
+  "popularity": 15.917,
+  "poster_path": "/vL7Xw04nFMHwnvXRFCmYYAzMUvY.jpg",
+  "production_companies": [
+    {
+      "id": 880,
+      "logo_path": "/vwhPRAZ4lhUtSuaifk4Au2MIm92.png",
+      "name": "Daiei Film",
+      "origin_country": "JP"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "JP",
+      "name": "Japan"
+    }
+  ],
+  "release_date": "1950-08-26",
+  "revenue": 96568,
+  "runtime": 88,
+  "spoken_languages": [
+    {
+      "english_name": "Japanese",
+      "iso_639_1": "ja",
+      "name": "日本語"
+    }
+  ],
+  "status": "Released",
+  "tagline": "The husband, the wife… or the bandit?",
+  "title": "Rashomon",
+  "video": false,
+  "vote_average": 8.132,
+  "vote_count": 1874,
+  "__v": 1,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "648a98ff4a9d370d4c1b7613"
+      },
+      "createdAt": {
+        "$date": "2023-06-15T04:52:15.750Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-15T04:52:15.750Z"
+      }
+    }
+  ],
+  "vote_average_user": 10,
+  "vote_count_user": 1
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e1a"
+  },
+  "adult": false,
+  "backdrop_path": "/1fJSyFhvxBjyLZsBnYs4641YXu1.jpg",
+  "belongs_to_collection": null,
+  "budget": 2962051,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    }
+  ],
+  "homepage": "",
+  "id": 549,
+  "imdb_id": "tt0115632",
+  "original_language": "en",
+  "original_title": "Basquiat",
+  "overview": "The brief life of Jean Michel Basquiat, a world renowned New York street artist struggling with fame, drugs and his identity.",
+  "popularity": 10.082,
+  "poster_path": "/gFfVhN8BbgHhMb3ZNQRAH5xc7kq.jpg",
+  "production_companies": [
+    {
+      "id": 93380,
+      "logo_path": null,
+      "name": "Eleventh Street Production",
+      "origin_country": ""
+    },
+    {
+      "id": 93381,
+      "logo_path": null,
+      "name": "Jon Kilik",
+      "origin_country": ""
+    },
+    {
+      "id": 14,
+      "logo_path": "/m6AHu84oZQxvq7n1rsvMNJIAsMu.png",
+      "name": "Miramax",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1996-08-09",
+  "revenue": 3011195,
+  "runtime": 108,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    }
+  ],
+  "status": "Released",
+  "tagline": "In 1981, A Nineteen-Year-Old Unknown Graffiti Writer Took The New York Art World By Storm. The Rest Is Art History.",
+  "title": "Basquiat",
+  "video": false,
+  "vote_average": 6.687,
+  "vote_count": 252
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e1b"
+  },
+  "adult": false,
+  "backdrop_path": "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+  "belongs_to_collection": null,
+  "budget": 63000000,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "http://www.foxmovies.com/movies/fight-club",
+  "id": 550,
+  "imdb_id": "tt0137523",
+  "original_language": "en",
+  "original_title": "Fight Club",
+  "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+  "popularity": 63.885,
+  "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+  "production_companies": [
+    {
+      "id": 508,
+      "logo_path": "/7cxRWzi4LsVm4Utfpr1hfARNurT.png",
+      "name": "Regency Enterprises",
+      "origin_country": "US"
+    },
+    {
+      "id": 711,
+      "logo_path": "/tEiIH5QesdheJmDAqQwvtN60727.png",
+      "name": "Fox 2000 Pictures",
+      "origin_country": "US"
+    },
+    {
+      "id": 20555,
+      "logo_path": "/hD8yEGUBlHOcfHYbujp71vD8gZp.png",
+      "name": "Taurus Film",
+      "origin_country": "DE"
+    },
+    {
+      "id": 54051,
+      "logo_path": null,
+      "name": "Atman Entertainment",
+      "origin_country": ""
+    },
+    {
+      "id": 54052,
+      "logo_path": null,
+      "name": "Knickerbocker Films",
+      "origin_country": "US"
+    },
+    {
+      "id": 4700,
+      "logo_path": "/A32wmjrs9Psf4zw0uaixF0GXfxq.png",
+      "name": "The Linson Company",
+      "origin_country": "US"
+    },
+    {
+      "id": 25,
+      "logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png",
+      "name": "20th Century Fox",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1999-10-15",
+  "revenue": 100853753,
+  "runtime": 139,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Mischief. Mayhem. Soap.",
+  "title": "Fight Club",
+  "video": false,
+  "vote_average": 8.434,
+  "vote_count": 26545
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e1c"
+  },
+  "adult": false,
+  "backdrop_path": "/v1QEIuBM1vvpvfqalahhIyXY0Cm.jpg",
+  "belongs_to_collection": {
+    "id": 372257,
+    "name": "The Poseidon Adventure Collection",
+    "poster_path": "/ngvcBGzUbPsUGaSSLOaVNG2lfLW.jpg",
+    "backdrop_path": "/kE3SAAQfWVkjJUZy1ohha8hy3LH.jpg"
+  },
+  "budget": 5000000,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 551,
+  "imdb_id": "tt0069113",
+  "original_language": "en",
+  "original_title": "The Poseidon Adventure",
+  "overview": "When their ocean liner capsizes, a group of passengers struggle to survive and escape.",
+  "popularity": 18.844,
+  "poster_path": "/6RGiA5BfhelU9zoD0b1GAG4GWWf.jpg",
+  "production_companies": [
+    {
+      "id": 10281,
+      "logo_path": null,
+      "name": "Kent Productions",
+      "origin_country": ""
+    },
+    {
+      "id": 25,
+      "logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png",
+      "name": "20th Century Fox",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "1972-12-13",
+  "revenue": 84563118,
+  "runtime": 117,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Hell, upside down.",
+  "title": "The Poseidon Adventure",
+  "video": false,
+  "vote_average": 7.123,
+  "vote_count": 754
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e1d"
+  },
+  "adult": false,
+  "backdrop_path": "/k4JIHyAXaGHwAwT7y5Skd17f0Wl.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 552,
+  "imdb_id": "tt0237539",
+  "original_language": "it",
+  "original_title": "Pane e tulipani",
+  "overview": "An endearing light comedy about a woman who spontaneously becomes a resident of Venice after her family left her behind. While enjoying the wonderful people she meets she achieves a new life and the first time independent of her family.",
+  "popularity": 7.669,
+  "poster_path": "/vz0THk3uPmYip2U761UqB2D0hRl.jpg",
+  "production_companies": [
+    {
+      "id": 317,
+      "logo_path": "/HJj0J9Tk6AGcLpL4O7mI3bsccM.png",
+      "name": "Istituto Luce Cinecittà",
+      "origin_country": "IT"
+    },
+    {
+      "id": 169018,
+      "logo_path": null,
+      "name": "Monogatari",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IT",
+      "name": "Italy"
+    },
+    {
+      "iso_3166_1": "CH",
+      "name": "Switzerland"
+    }
+  ],
+  "release_date": "2000-03-03",
+  "revenue": 8478434,
+  "runtime": 114,
+  "spoken_languages": [
+    {
+      "english_name": "Italian",
+      "iso_639_1": "it",
+      "name": "Italiano"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Imagine your life. Now go live it.",
+  "title": "Bread and Tulips",
+  "video": false,
+  "vote_average": 7.273,
+  "vote_count": 244,
+  "__v": 1,
+  "ratings": [
+    {
+      "user": {
+        "$oid": "6480b1dcaccd5290025c73b9"
+      },
+      "rating": 10,
+      "_id": {
+        "$oid": "648af7fa4a9d370d4ca2ccb4"
+      },
+      "createdAt": {
+        "$date": "2023-06-15T11:37:30.418Z"
+      },
+      "updatedAt": {
+        "$date": "2023-06-15T11:37:30.418Z"
+      }
+    }
+  ],
+  "vote_average_user": 10,
+  "vote_count_user": 1
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e1e"
+  },
+  "adult": false,
+  "backdrop_path": "/r3xsFBD1VTUusk393bBc7SsDUJe.jpg",
+  "belongs_to_collection": {
+    "id": 1952,
+    "name": "USA: Land of Opportunities Collection",
+    "poster_path": "/A4atgNoJJi1IK8AP2Bx4yzoXh6z.jpg",
+    "backdrop_path": "/qMA0dQpuhOb8UtAaEj5PasG3mCB.jpg"
+  },
+  "budget": 10000000,
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 553,
+  "imdb_id": "tt0276919",
+  "original_language": "en",
+  "original_title": "Dogville",
+  "overview": "A barren soundstage is stylishly utilized to create a minimalist small-town setting in which a mysterious woman named Grace hides from the criminals who pursue her. The town is two-faced and offers to harbor Grace as long as she can make it worth their effort, so Grace works hard under the employ of various townspeople to win their favor. Tensions flare, however, and Grace's status as a helpless outsider provokes vicious contempt and abuse from the citizens of Dogville.",
+  "popularity": 14.272,
+  "poster_path": "/lraVawavIXh5geMlVjpzCw9TGwR.jpg",
+  "production_companies": [
+    {
+      "id": 5975,
+      "logo_path": "/vvjgoKygWWYZvYyidT3RmOCq5If.png",
+      "name": "YLE",
+      "origin_country": "FI"
+    },
+    {
+      "id": 76,
+      "logo_path": "/nebkQYtQKhZyHJfh5v0oGpNbPzu.png",
+      "name": "Zentropa Entertainments",
+      "origin_country": "DK"
+    },
+    {
+      "id": 119,
+      "logo_path": "/1di2gITGUZr730AMuMKiCrP90Vl.png",
+      "name": "DR",
+      "origin_country": "DK"
+    },
+    {
+      "id": 320,
+      "logo_path": null,
+      "name": "Trollhättan Film",
+      "origin_country": "SE"
+    },
+    {
+      "id": 321,
+      "logo_path": "/pfp6VWF3tYfOHHVRHpYe2iGcYrf.png",
+      "name": "Memfis Film",
+      "origin_country": "SE"
+    },
+    {
+      "id": 591,
+      "logo_path": "/q5I5RDwMEiqoNmfaJgd2LraEOJY.png",
+      "name": "France 3 Cinéma",
+      "origin_country": "FR"
+    },
+    {
+      "id": 7777,
+      "logo_path": "/vd6oWpxQXyaeWGfm0A5SnJi8pyo.png",
+      "name": "Slot Machine",
+      "origin_country": "FR"
+    },
+    {
+      "id": 11239,
+      "logo_path": null,
+      "name": "Liberator Productions",
+      "origin_country": "FR"
+    },
+    {
+      "id": 12023,
+      "logo_path": "/97tVKGqnkjn0hwTGGRDPRgYWbrE.png",
+      "name": "Nederlandse Programma Stichting (NPS)",
+      "origin_country": "NL"
+    },
+    {
+      "id": 12045,
+      "logo_path": null,
+      "name": "Isabella Films B.V.",
+      "origin_country": ""
+    },
+    {
+      "id": 30268,
+      "logo_path": null,
+      "name": "Pain Unlimited GmbH Filmproduktion",
+      "origin_country": ""
+    },
+    {
+      "id": 53873,
+      "logo_path": null,
+      "name": "Something Else B.V.",
+      "origin_country": ""
+    },
+    {
+      "id": 53874,
+      "logo_path": "/mZJMAPElHQBIuWWXSyHtyaMf26C.png",
+      "name": "Sigma Films",
+      "origin_country": "GB"
+    },
+    {
+      "id": 53875,
+      "logo_path": null,
+      "name": "Zoma Films Ltd.",
+      "origin_country": ""
+    },
+    {
+      "id": 94,
+      "logo_path": "/huC7HqorvUThGIrENrbcHmQVUA0.png",
+      "name": "ARTE France Cinéma",
+      "origin_country": "FR"
+    },
+    {
+      "id": 2999,
+      "logo_path": "/zGSqFee9aDgDuLD6vcs2mcJUem4.png",
+      "name": "SVT",
+      "origin_country": "SE"
+    },
+    {
+      "id": 10946,
+      "logo_path": "/gk4SFkJ3G49gGL308zymD8QGNw.png",
+      "name": "WDR/Arte",
+      "origin_country": "DE"
+    },
+    {
+      "id": 2801,
+      "logo_path": "/bswb1PLLsKDUXMLgy42bZtCtIde.png",
+      "name": "Film i Väst",
+      "origin_country": "SE"
+    },
+    {
+      "id": 25491,
+      "logo_path": null,
+      "name": "Edith Film Oy",
+      "origin_country": ""
+    },
+    {
+      "id": 23207,
+      "logo_path": null,
+      "name": "Invicta Capital",
+      "origin_country": "GB"
+    },
+    {
+      "id": 7843,
+      "logo_path": "/v293yOJQyswsz3bLQ7eylTcsvdp.png",
+      "name": "4 1/2",
+      "origin_country": "NO"
+    },
+    {
+      "id": 3389,
+      "logo_path": "/ppNofD7TAGZPbCWqdRZL10D7Yg9.png",
+      "name": "TV 2",
+      "origin_country": "NO"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "DK",
+      "name": "Denmark"
+    },
+    {
+      "iso_3166_1": "FR",
+      "name": "France"
+    },
+    {
+      "iso_3166_1": "DE",
+      "name": "Germany"
+    },
+    {
+      "iso_3166_1": "NL",
+      "name": "Netherlands"
+    },
+    {
+      "iso_3166_1": "NO",
+      "name": "Norway"
+    },
+    {
+      "iso_3166_1": "SE",
+      "name": "Sweden"
+    },
+    {
+      "iso_3166_1": "GB",
+      "name": "United Kingdom"
+    }
+  ],
+  "release_date": "2003-05-19",
+  "revenue": 16680836,
+  "runtime": 178,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "A quiet little town not far from here.",
+  "title": "Dogville",
+  "video": false,
+  "vote_average": 7.786,
+  "vote_count": 2130
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e1f"
+  },
+  "adult": false,
+  "backdrop_path": "/1qwXItFKqvKYyW1CwbYhxyUC8Pj.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 554,
+  "imdb_id": "tt0308476",
+  "original_language": "ru",
+  "original_title": "Кукушка",
+  "overview": "September of 1944, a few days before Finland went out of the Second World War. A chained to a rock Finnish sniper-kamikadze Veikko managed to set himself free. Ivan, a captain of the Soviet Army, arrested by the Front Secret Police 'Smersh', has a narrow escape. They are soldiers of the two enemy armies. A Lapp woman Anni gives a shelter to both of them at her farm. For Anni they are not enemies, but just men.",
+  "popularity": 8.28,
+  "poster_path": "/jz5u5anVn3PTAjHC1nQehZGQ41C.jpg",
+  "production_companies": [
+    {
+      "id": 318,
+      "logo_path": "/q0UG4oZERwIywJdDPF4lRlvdYGW.png",
+      "name": "CTB Film Company",
+      "origin_country": "RU"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "FI",
+      "name": "Finland"
+    },
+    {
+      "iso_3166_1": "RU",
+      "name": "Russia"
+    }
+  ],
+  "release_date": "2002-01-01",
+  "revenue": 0,
+  "runtime": 100,
+  "spoken_languages": [
+    {
+      "english_name": "German",
+      "iso_639_1": "de",
+      "name": "Deutsch"
+    },
+    {
+      "english_name": "Russian",
+      "iso_639_1": "ru",
+      "name": "Pусский"
+    },
+    {
+      "english_name": "Finnish",
+      "iso_639_1": "fi",
+      "name": "suomi"
+    }
+  ],
+  "status": "Released",
+  "tagline": "She's Making Peace One Man at a Time.",
+  "title": "The Cuckoo",
+  "video": false,
+  "vote_average": 7.072,
+  "vote_count": 76
+},
+{
+  "_id": {
+    "$oid": "6484964638a1d44ab8706e20"
+  },
+  "adult": false,
+  "backdrop_path": "/qmeFQVVx7qBBW8NE1ZNVh5PSwLS.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "https://paradigmafilms.ch/en/absolut-3/",
+  "id": 555,
+  "imdb_id": "tt0442896",
+  "original_language": "en",
+  "original_title": "Absolut",
+  "overview": "Two guys against globalization want to plant a virus in the network of a finance corporation. On the day of the attack Alex has an accident and cannot remember anything. Visions and reality are thrown together in a confusing maze. Alex tries to escape from this muddle but what he discovers turns out to be rather frightening…",
+  "popularity": 1.953,
+  "poster_path": "/cwxOwSDwbwUfceIlaWFoo65SdzX.jpg",
+  "production_companies": [
+    {
+      "id": 82040,
+      "logo_path": null,
+      "name": "Paradigma Films",
+      "origin_country": "CH"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "CH",
+      "name": "Switzerland"
+    }
+  ],
+  "release_date": "2005-04-20",
+  "revenue": 0,
+  "runtime": 94,
+  "spoken_languages": [
+    {
+      "english_name": "French",
+      "iso_639_1": "fr",
+      "name": "Français"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Absolut",
+  "video": false,
+  "vote_average": 7.8,
+  "vote_count": 23
+},
+{
+  "_id": {
+    "$oid": "648c9c717f7e59dd79b3fa40"
+  },
+  "adult": false,
+  "backdrop_path": "/uif5fUshJrXyyDzfpzp1DLw3N0S.jpg",
+  "id": 539,
+  "title": "Psycho",
+  "overview": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother.",
+  "genres": [
+    {
+      "id": "27",
+      "name": "Horror",
+      "_id": {
+        "$oid": "648c9c717f7e59dd79b3fa41"
+      }
+    },
+    {
+      "id": "18",
+      "name": "Drama",
+      "_id": {
+        "$oid": "648c9c717f7e59dd79b3fa42"
+      }
+    },
+    {
+      "id": "53",
+      "name": "Thriller",
+      "_id": {
+        "$oid": "648c9c717f7e59dd79b3fa43"
+      }
+    }
+  ],
+  "poster_path": "/yz4QVqPx3h1hD1DfqqQkCq3rmxW.jpg",
+  "production_companies": [
+    {
+      "id": 10717,
+      "logo_path": null,
+      "name": "Shamley Productions",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "648c9c717f7e59dd79b3fa44"
+      }
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America",
+      "_id": {
+        "$oid": "648c9c717f7e59dd79b3fa45"
+      }
+    }
+  ],
+  "release_date": {
+    "$date": {
+      "$numberLong": "-300672000000"
+    }
+  },
+  "status": "Released",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648c9c807f7e59dd79b59607"
+  },
+  "adult": false,
+  "backdrop_path": "/dAHrR2Avzpdpii9RGRGglJqt0BU.jpg",
+  "id": 537,
+  "title": "Not Here to Be Loved",
+  "overview": "Jean-Claude Delsart, a 50 years-old bailiff, with his worn-out smile and heart, abandoned a long time ago the idea that life could give him pleasures. Until the day, he dares to push the doors of a tango lesson...",
+  "genres": [
+    {
+      "id": "10749",
+      "name": "Romance",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b59608"
+      }
+    },
+    {
+      "id": "18",
+      "name": "Drama",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b59609"
+      }
+    }
+  ],
+  "poster_path": "/9nlF36ymCFTkss54lotmSSEmIaQ.jpg",
+  "production_companies": [
+    {
+      "id": 309,
+      "logo_path": "/eVdJe4ha50lW1Eop1tq93TMh1XW.png",
+      "name": "Angoa-Agicoa",
+      "origin_country": "FR",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b5960a"
+      }
+    },
+    {
+      "id": 310,
+      "logo_path": "/4Gp5A4YdjPBfsHT47ngHMaXWmb9.png",
+      "name": "CNC",
+      "origin_country": "FR",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b5960b"
+      }
+    },
+    {
+      "id": 311,
+      "logo_path": "/TNGvZ8zOklntjPP3EcsHtrR8Rc.png",
+      "name": "PROCIREP",
+      "origin_country": "FR",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b5960c"
+      }
+    },
+    {
+      "id": 313,
+      "logo_path": "/rx5CT9wUnEz0AcdpcX9epujv7nw.png",
+      "name": "TS Productions",
+      "origin_country": "FR",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b5960d"
+      }
+    },
+    {
+      "id": 314,
+      "logo_path": null,
+      "name": "Uni Etoile 2",
+      "origin_country": "",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b5960e"
+      }
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "FR",
+      "name": "France",
+      "_id": {
+        "$oid": "648c9c807f7e59dd79b5960f"
+      }
+    }
+  ],
+  "release_date": {
+    "$date": "2005-10-12T00:00:00.000Z"
+  },
+  "status": "Released",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648c9c8d7f7e59dd79b70538"
+  },
+  "adult": false,
+  "backdrop_path": "/kGzFbGhp99zva6oZODW5atUtnqi.jpg",
+  "id": 240,
+  "title": "The Godfather Part II",
+  "overview": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+  "genres": [
+    {
+      "id": "18",
+      "name": "Drama",
+      "_id": {
+        "$oid": "648c9c8d7f7e59dd79b70539"
+      }
+    },
+    {
+      "id": "80",
+      "name": "Crime",
+      "_id": {
+        "$oid": "648c9c8d7f7e59dd79b7053a"
+      }
+    }
+  ],
+  "poster_path": "/bMadFzhjy9T7R8J48QGq1ngWNAK.jpg",
+  "production_companies": [
+    {
+      "id": 4,
+      "logo_path": "/gz66EfNoYPqHTYI4q9UEN4CbHRc.png",
+      "name": "Paramount",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "648c9c8d7f7e59dd79b7053b"
+      }
+    },
+    {
+      "id": 536,
+      "logo_path": null,
+      "name": "The Coppola Company",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "648c9c8d7f7e59dd79b7053c"
+      }
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America",
+      "_id": {
+        "$oid": "648c9c8d7f7e59dd79b7053d"
+      }
+    }
+  ],
+  "release_date": {
+    "$date": "1974-12-20T00:00:00.000Z"
+  },
+  "status": "Released",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648c9c967f7e59dd79b8014b"
+  },
+  "adult": false,
+  "backdrop_path": "/5zTwAcnI3zCJ0mucPPnoBtkSWEV.jpg",
+  "id": 239,
+  "title": "Some Like It Hot",
+  "overview": "Two musicians witness a mob hit and struggle to find a way out of the city before they are found by the gangsters. Their only opportunity is to join an all-girl band as they leave on a tour. To make their getaway they must first disguise themselves as women, then keep their identities secret and deal with the problems this brings - such as an attractive bandmate and a very determined suitor.",
+  "genres": [
+    {
+      "id": "35",
+      "name": "Comedy",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b8014c"
+      }
+    },
+    {
+      "id": "10402",
+      "name": "Music",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b8014d"
+      }
+    },
+    {
+      "id": "10749",
+      "name": "Romance",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b8014e"
+      }
+    },
+    {
+      "id": "80",
+      "name": "Crime",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b8014f"
+      }
+    }
+  ],
+  "poster_path": "/hVIKyTK13AvOGv7ICmJjK44DTzp.jpg",
+  "production_companies": [
+    {
+      "id": 219,
+      "logo_path": null,
+      "name": "The Mirisch Company",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b80150"
+      }
+    },
+    {
+      "id": 11982,
+      "logo_path": null,
+      "name": "Ashton Productions",
+      "origin_country": "",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b80151"
+      }
+    },
+    {
+      "id": 60,
+      "logo_path": "/1SEj4nyG3JPBSKBbFhtdcHRaIF9.png",
+      "name": "United Artists",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b80152"
+      }
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America",
+      "_id": {
+        "$oid": "648c9c967f7e59dd79b80153"
+      }
+    }
+  ],
+  "release_date": {
+    "$date": {
+      "$numberLong": "-340502400000"
+    }
+  },
+  "status": "Released",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648c9e7dea952aef75ad873a"
+  },
+  "adult": false,
+  "backdrop_path": "/hQ4pYsIbP22TMXOUdSfC2mjWrO0.jpg",
+  "id": 2,
+  "title": "Ariel",
+  "overview": "Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things don't go as planned...",
+  "genres": [
+    {
+      "id": "18",
+      "name": "Drama",
+      "_id": {
+        "$oid": "648c9e7dea952aef75ad873b"
+      }
+    },
+    {
+      "id": "35",
+      "name": "Comedy",
+      "_id": {
+        "$oid": "648c9e7dea952aef75ad873c"
+      }
+    },
+    {
+      "id": "10749",
+      "name": "Romance",
+      "_id": {
+        "$oid": "648c9e7dea952aef75ad873d"
+      }
+    }
+  ],
+  "poster_path": "/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg",
+  "production_companies": [
+    {
+      "id": 2303,
+      "logo_path": null,
+      "name": "Villealfa Filmproductions",
+      "origin_country": "FI",
+      "_id": {
+        "$oid": "648c9e7dea952aef75ad873e"
+      }
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "FI",
+      "name": "Finland",
+      "_id": {
+        "$oid": "648c9e7dea952aef75ad873f"
+      }
+    }
+  ],
+  "release_date": {
+    "$date": "1988-10-21T00:00:00.000Z"
+  },
+  "status": "Released",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6493d8797bbe176348e548c7"
+  },
+  "adult": false,
+  "backdrop_path": "/c1BaOxC8bo5ACFYkYYxL0bBWRaq.jpg",
+  "id": 5,
+  "title": "Four Rooms",
+  "overview": "It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+  "genres": [
+    {
+      "id": "80",
+      "name": "Crime",
+      "_id": {
+        "$oid": "6493d8797bbe176348e548c8"
+      }
+    },
+    {
+      "id": "35",
+      "name": "Comedy",
+      "_id": {
+        "$oid": "6493d8797bbe176348e548c9"
+      }
+    }
+  ],
+  "poster_path": "/75aHn1NOYXh4M7L5shoeQ6NGykP.jpg",
+  "production_companies": [
+    {
+      "id": 14,
+      "logo_path": "/m6AHu84oZQxvq7n1rsvMNJIAsMu.png",
+      "name": "Miramax",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "6493d8797bbe176348e548ca"
+      }
+    },
+    {
+      "id": 59,
+      "logo_path": "/yH7OMeSxhfP0AVM6iT0rsF3F4ZC.png",
+      "name": "A Band Apart",
+      "origin_country": "US",
+      "_id": {
+        "$oid": "6493d8797bbe176348e548cb"
+      }
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America",
+      "_id": {
+        "$oid": "6493d8797bbe176348e548cc"
+      }
+    }
+  ],
+  "release_date": {
+    "$date": "1995-12-09T00:00:00.000Z"
+  },
+  "status": "Released",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a8489ab05fd44698c9287e"
+  },
+  "adult": false,
+  "title": "The Amazing Spider-Man 2012",
+  "overview": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.",
+  "poster_path": "https://upload.wikimedia.org/wikipedia/vi/1/1a/The_Amazing_Spider-Man_2012_VN_poster.jpg",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "genres": [],
+  "production_companies": [],
+  "production_countries": [],
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a84af2b05fd44698c97e26"
+  },
+  "adult": false,
+  "title": "42342aaaaaaaaaaaa",
+  "overview": "121",
+  "poster_path": "https://upload.wikimedia.org/wikipedia/vi/1/1a/The_Amazing_Spider-Man_2012_VN_poster.jpg",
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "genres": [],
+  "production_companies": [],
+  "production_countries": [],
+  "ratings": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b16429457b07f084d3a9b8"
+  },
+  "adult": false,
+  "title": "5455",
+  "overview": "534534535",
+  "poster_path": "54535345",
+  "release_date": {
+    "$date": "2023-07-14T00:00:00.000Z"
+  },
+  "vote_count_user": 0,
+  "vote_average_user": 0,
+  "genres": [],
+  "production_companies": [],
+  "production_countries": [],
+  "ratings": [],
+  "__v": 0
+}]

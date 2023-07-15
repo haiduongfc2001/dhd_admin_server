@@ -1,22 +1,16 @@
-const db = require("./config/db");
 const express = require("express");
+const connectDB = require("./config/db");
 const cors = require("cors");
 
-const moment = require("moment-timezone");
-
 const app = express();
+const route = require("./routes");
 
 require("dotenv").config();
 
-const ProductRoute = require("./routes/ProductRoute");
-const MovieRoute = require("./routes/MovieRoute");
-const UserRegisterRoute = require("./routes/UserRegisterRoute");
-const UserRoute = require("./routes/UserRoute");
-const AdminRoute = require("./routes/AdminRoute");
 const path = require("path");
 
-// Connect to db
-db.connect();
+// Connect to MongoDB
+connectDB();
 
 // Enable CORS
 app.use(cors());
@@ -24,20 +18,25 @@ app.use(cors());
 // phục vụ các tệp tin tĩnh từ thư mục tài nguyên
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.get("/", function (req, res) {
-  res.send("Xin chào Đỗ Hải Dương!");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log(
+    "HTTP Method: " +
+      req.method +
+      ", URL - " +
+      req.url +
+      ", Status: " +
+      res.statusCode
+  );
+  next();
 });
 
-// For user route
-app.use("/", ProductRoute);
-app.use("/", MovieRoute);
-app.use("/", UserRegisterRoute);
-app.use("/", UserRoute);
-app.use("/admin", AdminRoute);
+route(app);
 
-const dataMovies = require("./config/dataMovie.json");
-app.get("/api/all-movies", async (req, res) => {
-  res.json(dataMovies);
+app.get("/", function (req, res) {
+  res.send("Xin chào Đỗ Hải Dương!");
 });
 
 const port = process.env.PORT || 5000;
