@@ -54,7 +54,7 @@ user_route.delete("/user/:_id", AdminController.AdminDeleteUser);
 
 user_route.post(
   "/register",
-  upload.single("image"),
+  // upload.single("image"),
   UserController.UserRegister
 );
 user_route.get("/verify", UserController.VerifyMail);
