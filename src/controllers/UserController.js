@@ -188,7 +188,7 @@ const UserRegister = async (req, res) => {
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone,
-        image: req.file ? req.file.path : "", // If image was uploaded, store its path
+        // image: req.file.filename,
         password: hashedPassword,
         is_admin: 0,
       });
@@ -440,7 +440,7 @@ const UserEditProfile = async (req, res) => {
 const UserEditImage = async (req, res) => {
   try {
     const user_id = req.params._id;
-    const image = req.file.filename;
+    const image = req.file ? req.file.path : "";
 
     const user = await User.findById(user_id);
 
