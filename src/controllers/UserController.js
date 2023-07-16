@@ -440,7 +440,7 @@ const UserEditProfile = async (req, res) => {
 const UserEditImage = async (req, res) => {
   try {
     const user_id = req.params._id;
-    const image = req.file ? req.file.path : "";
+    const image = req.file.filename;
 
     const user = await User.findById(user_id);
 

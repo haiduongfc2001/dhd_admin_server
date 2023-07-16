@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+/src/routes/uploads
+
 # production
 /build
 /.idea
