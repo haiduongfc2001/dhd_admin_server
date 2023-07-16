@@ -188,7 +188,7 @@ const UserRegister = async (req, res) => {
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone,
-        image: req.file.filename,
+        // image: req.file.filename,
         password: hashedPassword,
         is_admin: 0,
       });
@@ -449,18 +449,18 @@ const UserEditImage = async (req, res) => {
     }
 
     // Xóa ảnh cũ nếu người dùng update ảnh mới
-    if (user.image) {
-      const imagePath = path.join(
-        __dirname,
-        "../public/userImages",
-        user.image
-      );
-      fs.unlink(imagePath, (err) => {
-        if (err) {
-          console.log(err);
-        }
-      });
-    }
+    // if (user.image) {
+    //   const imagePath = path.join(
+    //     __dirname,
+    //     "../public/userImages",
+    //     user.image
+    //   );
+    //   fs.unlink(imagePath, (err) => {
+    //     if (err) {
+    //       console.log(err);
+    //     }
+    //   });
+    // }
 
     user.image = image;
     user.updatedAt = Date.now();
