@@ -12,9 +12,6 @@ user_route.use(
   })
 );
 
-const Auth = require("../middleware/Auth");
-const User = require("../models/UserModel");
-
 const UserController = require("../controllers/UserController");
 const AdminController = require("../controllers/AdminController");
 
@@ -27,7 +24,6 @@ user_route.use(bodyParser.json());
 user_route.use(bodyParser.urlencoded({ extended: true }));
 
 const multer = require("multer");
-const { authMiddleware } = require("../middleware/Auth");
 user_route.use("/userImages", express.static("src/public/userImages"));
 
 const storage = multer.diskStorage({
