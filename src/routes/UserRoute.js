@@ -12,6 +12,9 @@ user_route.use(
   })
 );
 
+const Auth = require("../middleware/Auth");
+const User = require("../models/UserModel");
+
 const UserController = require("../controllers/UserController");
 const AdminController = require("../controllers/AdminController");
 
@@ -24,19 +27,25 @@ user_route.use(bodyParser.json());
 user_route.use(bodyParser.urlencoded({ extended: true }));
 
 const multer = require("multer");
+const { authMiddleware } = require("../middleware/Auth");
 user_route.use("/userImages", express.static("src/public/userImages"));
 
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./uploads/");
+  destination: function (req, res, cb) {
+    cb(null, path.join(__dirname, "../public/userImages"));
   },
   filename: function (req, file, cb) {
-    cb(null, new Date().toISOString() + file.originalname);
+    const name = Date.now() + "-" + file.originalname;
+    cb(null, name);
   },
 });
 
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
+  if (
+    file.mimetype === "image/jpeg" ||
+    file.mimetype === "image/png" ||
+    file.mimetype === "image/jpg"
+  ) {
     cb(null, true);
   } else {
     cb(null, false);
@@ -46,7 +55,7 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 1024 * 1024 * 5, // 5MB file size limit
+    fileSize: 1024 * 1024 * 10, // 10MB file size limit
   },
   fileFilter: fileFilter,
 });
