@@ -273,6 +273,7 @@ const AdminAddUser = async (req, res) => {
         image: req.file.filename,
         password: hashedPassword,
         is_admin: 0,
+        is_verified: 1,
       });
 
       // Lưu user vào csdl
